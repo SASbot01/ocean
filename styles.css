@@ -444,6 +444,10 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .phone:hover { color: var(--blue-700); }
 .zone { display: flex; align-items: center; gap: 8px; margin-top: 12px; color: var(--muted); }
 .zone .ic { color: var(--blue-600); }
+.inline-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; font: 700 15px var(--font-display); color: var(--blue-600); text-decoration: none; }
+.inline-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+.inline-link .ic { width: 1.05em; height: 1.05em; }
+.person .inline-link .ic:first-child { fill: #f5b400; stroke: none; width: 1.2em; height: 1.2em; }
 .person-brand {
   display: flex; align-items: center; gap: 18px; margin-top: 26px; padding: 22px 24px; border-radius: 18px; overflow: hidden;
   background: radial-gradient(90% 140% at 85% -20%, rgba(140, 196, 246, .35), transparent 60%), linear-gradient(160deg, var(--navy-900), var(--navy-700));
