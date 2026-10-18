@@ -82,7 +82,7 @@
 
       const negocio = data.negocio.trim() + (data.localidad.trim() ? ` (${data.localidad.trim()})` : '');
       const lines = [
-        `Hola Laurent, soy ${data.nombre.trim()}, de ${negocio}.`,
+        `Hola, soy ${data.nombre.trim()}, de ${negocio}.`,
         `Me interesa: ${data.servicio}.`,
       ];
       if (data.mensaje.trim()) lines.push('', data.mensaje.trim());
