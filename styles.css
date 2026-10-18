@@ -394,7 +394,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .plink { margin-top: auto; padding-top: 8px; display: inline-flex; align-items: center; gap: 6px; font: 700 15px var(--font-display); color: var(--blue-600); text-decoration: none; }
 .plink:hover { text-decoration: underline; }
 .project blockquote { margin: 8px 0 0; padding: 16px 18px; border-radius: 14px; background: var(--tint); font-style: italic; color: var(--ink-2); }
-.projects-more { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 14px; }
+.projects-more { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
 .project-sm { flex-direction: row; align-items: center; gap: 14px; padding: 18px; }
 .project-sm .mono { width: 44px; height: 44px; font-size: 15px; border-radius: 12px; background: linear-gradient(140deg, var(--blue-300), var(--blue-600)); }
 .project-sm h3 { font-size: 1.02rem; letter-spacing: -.01em; }
@@ -522,7 +522,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1080px) {
-  .features, .soft-grid, .projects-more { grid-template-columns: repeat(2, 1fr); }
+  .features, .soft-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-grid { gap: 32px; }
 }
 
