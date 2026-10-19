@@ -382,8 +382,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .soft-cta .btn { flex: none; }
 
 /* Proyectos */
-.projects { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-.project { display: flex; flex-direction: column; overflow: hidden; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.projects { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; }
+.project { flex: 0 1 calc((100% - 54px) / 4); display: flex; flex-direction: column; overflow: hidden; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
 .project:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--blue-200); }
 .pthumb { display: block; aspect-ratio: 16 / 9; overflow: hidden; background: var(--navy-900); border-bottom: 1px solid var(--line); }
 .pthumb img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .6s ease; }
@@ -521,7 +521,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1080px) {
-  .features, .soft-grid, .projects { grid-template-columns: repeat(2, 1fr); }
+  .features, .soft-grid { grid-template-columns: repeat(2, 1fr); }
+  .project { flex-basis: calc((100% - 18px) / 2); }
   .hero-grid { gap: 32px; }
 }
 
@@ -575,7 +576,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .toast strong { font-size: 12.5px; }
   .waves { height: 70px; }
 
-  .services, .extras, .features, .perks, .how-steps, .why ul, .field-row, .soft-grid, .projects, .team { grid-template-columns: 1fr; }
+  .services, .extras, .features, .perks, .how-steps, .why ul, .field-row, .soft-grid, .team { grid-template-columns: 1fr; }
+  .project { flex-basis: 100%; }
   .codecard { display: none; }
   .soft-cta { padding: 24px 22px; }
   .product { grid-template-columns: 1fr; padding: 16px 16px 24px; }
