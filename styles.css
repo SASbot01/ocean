@@ -1,4 +1,4 @@
-/* Ocean Consulting Group — estilos */
+/* Ocean Digital Services — estilos */
 
 /* Fuentes alojadas en la propia web (sin peticiones a Google) */
 @font-face { font-family: "DM Sans"; font-style: normal; font-weight: 400 700; font-display: swap; src: url("fonts/dm-sans-latin.woff2") format("woff2"); }
@@ -382,23 +382,22 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .soft-cta .btn { flex: none; }
 
 /* Proyectos */
-.projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.project { display: flex; flex-direction: column; gap: 10px; padding: 28px 26px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.projects { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.project { display: flex; flex-direction: column; overflow: hidden; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
 .project:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--blue-200); }
-.project-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
-.mono { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; flex: none; font: 800 18px var(--font-display); letter-spacing: -.02em; color: #fff; background: linear-gradient(140deg, var(--navy-700), var(--blue-600)); }
-.ptag { font: 700 11.5px var(--font-display); letter-spacing: .08em; text-transform: uppercase; padding: 6px 11px; border-radius: 999px; background: var(--blue-100); color: var(--blue-700); }
-.project h3 { font-size: 1.3rem; }
-.pwho { font-size: 14px; font-weight: 500; color: var(--blue-600); }
-.project > p:not(.pwho) { font-size: 15.5px; color: var(--muted); }
-.plink { margin-top: auto; padding-top: 8px; display: inline-flex; align-items: center; gap: 6px; font: 700 15px var(--font-display); color: var(--blue-600); text-decoration: none; }
+.pthumb { display: block; aspect-ratio: 16 / 9; overflow: hidden; background: var(--navy-900); border-bottom: 1px solid var(--line); }
+.pthumb img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .6s ease; }
+.project:hover .pthumb img { transform: scale(1.04); }
+.pthumb-empty { display: grid; place-items: center; background: radial-gradient(120% 120% at 80% 0%, rgba(140, 196, 246, .35), transparent 60%), linear-gradient(150deg, var(--navy-900), var(--navy-700)); }
+.pthumb-empty span { font: 800 1.35rem var(--font-display); letter-spacing: -.02em; color: #fff; }
+.project-body { display: flex; flex-direction: column; gap: 8px; flex: 1; padding: 20px 20px 22px; }
+.ptag { align-self: flex-start; font: 700 11px var(--font-display); letter-spacing: .08em; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; background: var(--blue-100); color: var(--blue-700); }
+.project h3 { font-size: 1.2rem; margin-top: 4px; }
+.pwho { font-size: 13.5px; font-weight: 500; color: var(--blue-600); }
+.project-body > p:not(.pwho) { font-size: 14.5px; color: var(--muted); }
+.plink { margin-top: auto; padding-top: 6px; display: inline-flex; align-items: center; gap: 6px; font: 700 14px var(--font-display); color: var(--blue-600); text-decoration: none; overflow-wrap: anywhere; }
 .plink:hover { text-decoration: underline; }
-.project blockquote { margin: 8px 0 0; padding: 16px 18px; border-radius: 14px; background: var(--tint); font-style: italic; color: var(--ink-2); }
-.projects-more { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
-.project-sm { flex-direction: row; align-items: center; gap: 14px; padding: 18px; }
-.project-sm .mono { width: 44px; height: 44px; font-size: 15px; border-radius: 12px; background: linear-gradient(140deg, var(--blue-300), var(--blue-600)); }
-.project-sm h3 { font-size: 1.02rem; letter-spacing: -.01em; }
-.project-sm .pwho { font-size: 13px; margin-top: 2px; color: var(--muted); }
+.project blockquote { margin: 6px 0 0; padding: 14px 16px; border-radius: 14px; background: var(--tint); font-style: italic; color: var(--ink-2); }
 
 /* Cómo trabajamos */
 .ocean-band { overflow: hidden; }
@@ -522,7 +521,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1080px) {
-  .features, .soft-grid { grid-template-columns: repeat(2, 1fr); }
+  .features, .soft-grid, .projects { grid-template-columns: repeat(2, 1fr); }
   .hero-grid { gap: 32px; }
 }
 
@@ -548,7 +547,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .how { grid-template-columns: 1fr; }
   .tap-demo { grid-row: auto; grid-column: auto; width: 240px; margin: 0 auto; }
   .steps { grid-template-columns: 1fr; }
-  .services, .projects, .extras { grid-template-columns: 1fr; }
+  .services, .extras { grid-template-columns: 1fr; }
   .soft-cta { flex-direction: column; align-items: flex-start; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-grid > div:first-child { grid-column: 1 / -1; }
@@ -576,7 +575,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .toast strong { font-size: 12.5px; }
   .waves { height: 70px; }
 
-  .services, .extras, .features, .perks, .how-steps, .why ul, .field-row, .soft-grid, .projects-more, .team { grid-template-columns: 1fr; }
+  .services, .extras, .features, .perks, .how-steps, .why ul, .field-row, .soft-grid, .projects, .team { grid-template-columns: 1fr; }
   .codecard { display: none; }
   .soft-cta { padding: 24px 22px; }
   .product { grid-template-columns: 1fr; padding: 16px 16px 24px; }

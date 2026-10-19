@@ -1,4 +1,4 @@
-# Ocean Consulting Group — web
+# Ocean Digital Services — web
 
 Web estática (HTML + CSS + JS, sin build), publicada en Vercel desde la rama `main` de este repositorio: cada push se despliega solo.
 
