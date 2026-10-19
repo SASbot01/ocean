@@ -388,8 +388,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .pthumb { display: block; aspect-ratio: 16 / 9; overflow: hidden; background: var(--navy-900); border-bottom: 1px solid var(--line); }
 .pthumb img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .6s ease; }
 .project:hover .pthumb img { transform: scale(1.04); }
-.pthumb-empty { display: grid; place-items: center; background: radial-gradient(120% 120% at 80% 0%, rgba(140, 196, 246, .35), transparent 60%), linear-gradient(150deg, var(--navy-900), var(--navy-700)); }
-.pthumb-empty span { font: 800 1.35rem var(--font-display); letter-spacing: -.02em; color: #fff; }
 .project-body { display: flex; flex-direction: column; gap: 8px; flex: 1; padding: 20px 20px 22px; }
 .ptag { align-self: flex-start; font: 700 11px var(--font-display); letter-spacing: .08em; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; background: var(--blue-100); color: var(--blue-700); }
 .project h3 { font-size: 1.2rem; margin-top: 4px; }
