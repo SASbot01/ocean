@@ -293,6 +293,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .web-extras { margin-top: 64px; }
 .extras.extras-2 { grid-template-columns: repeat(2, 1fr); }
 .extra a { color: var(--blue-600); font-weight: 600; }
+.extra-medida { font-size: 1.6rem; }
+.extra-medida small { display: block; margin-top: 6px; }
 .extra-price small + small { margin-left: 2px; }
 .plan { position: relative; display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-radius: 26px; padding: 36px 34px 32px; box-shadow: var(--shadow); }
 .plan h3 { font-size: 1.6rem; }
